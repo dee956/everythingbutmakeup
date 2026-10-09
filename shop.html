@@ -59,7 +59,7 @@
 <script>
 
 var cats=[['all','All'],['tools','Tools & Brushes'],['bags','Bags & Storage'],['mirrors','Mirrors & Vanity'],['skin','Skincare & Removal']];
-var all=[['The Everyday Brush Set','tools','€34.00'],['Cloud Quilted Makeup Bag','bags','€24.00'],['Halo LED Vanity Mirror','mirrors','€59.00'],['Soft Reusable Cleansing Pads','skin','€12.00'],['Blending Sponge Duo','tools','€9.00'],['Clear Stackable Organizer','bags','€29.00'],['Pocket Compact Mirror','mirrors','€14.00'],['Bow Spa Headband','skin','€8.00'],['Rose Gold Lash Curler','tools','€11.00'],['Velvet Brush Roll','bags','€18.00'],['Clip-on Vanity Light Strip','mirrors','€22.00'],['Gentle Cleansing Balm','skin','€16.00']];
+var all=[['The Everyday Brush Set','tools','€34.00','brush-set'],['Cloud Quilted Makeup Bag','bags','€24.00','makeup-bag'],['Halo LED Vanity Mirror','mirrors','€59.00','led-mirror'],['Soft Reusable Cleansing Pads','skin','€12.00','cleansing-pads'],['Blending Sponge Duo','tools','€9.00','sponge-duo'],['Clear Stackable Organizer','bags','€29.00','organizer'],['Pocket Compact Mirror','mirrors','€14.00','compact-mirror'],['Bow Spa Headband','skin','€8.00','headband'],['Rose Gold Lash Curler','tools','€11.00','lash-curler'],['Velvet Brush Roll','bags','€18.00','brush-roll'],['Clip-on Vanity Light Strip','mirrors','€22.00','light-strip'],['Gentle Cleansing Balm','skin','€16.00','cleansing-balm']];
 var cur='all',label={};cats.forEach(function(c){label[c[0]]=c[1]});
 function esc(s){return s.replace(/&/g,'&amp;')}
 function render(){
@@ -69,7 +69,7 @@ b.style.cssText='min-height:44px;padding:0 20px;border-radius:999px;font:inherit
 b.onclick=function(){cur=c[0];render()};f.appendChild(b)});
 var list=all.filter(function(p){return cur==='all'||p[1]===cur});
 document.getElementById('count').textContent=list.length+(list.length===1?' product':' products');
-document.getElementById('grid').innerHTML=list.map(function(p,i){return '<div style="display:flex;flex-direction:column;gap:10px"><a href="product.html" style="text-decoration:none;display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:4/5;background:'+(i%2?'#F3E6D4':'#F9DDE0')+';border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:14px;color:#5C3F4B">Product photo</div><div style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#7A4A5C">'+esc(label[p[1]])+'</div><div style="font-size:18px;font-weight:500">'+p[0]+'</div></a><div style="color:#5C3F4B">'+p[2]+'</div><button style="min-height:46px;border-radius:999px;border:1px solid #3A2530;background:transparent;color:#3A2530;font:inherit;font-weight:500;cursor:pointer">Add to bag</button></div>'}).join('');
+document.getElementById('grid').innerHTML=list.map(function(p,i){return '<div style="display:flex;flex-direction:column;gap:10px"><a href="product.html" style="text-decoration:none;display:flex;flex-direction:column;gap:10px"><img src="img-'+p[3]+'.svg" alt="" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block"><div style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#7A4A5C">'+esc(label[p[1]])+'</div><div style="font-size:18px;font-weight:500">'+p[0]+'</div></a><div style="color:#5C3F4B">'+p[2]+'</div><button style="min-height:46px;border-radius:999px;border:1px solid #3A2530;background:transparent;color:#3A2530;font:inherit;font-weight:500;cursor:pointer">Add to bag</button></div>'}).join('');
 }
 render();
 </script>
