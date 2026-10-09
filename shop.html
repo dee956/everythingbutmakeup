@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop all | Everything but the Makeup</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#3A2530}a:hover{color:#B8436A}</style>
+</head>
+<body>
+
+<div style="font-family: 'DM Sans', sans-serif; color: #3A2530; background: #FFF8F3; font-size: 16px; line-height: 1.5">
+
+<div style="background: #F9DDE0; text-align: center; padding: 10px 16px; font-size: 14px; letter-spacing: 0.04em">Free shipping on orders over €50 · Easy returns within 30 days</div>
+
+<header style="border-bottom: 1px solid #F1D9DC; background: #FFF8F3">
+<div style="max-width: 1240px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px">
+<a href="index.html" style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 26px; font-weight: 500; text-decoration: none; min-height: 44px; display: flex; align-items: center">Everything but the Makeup</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px">
+<a href="shop.html" style="text-decoration: none; min-height: 44px; display: flex; align-items: center">Tools &amp; Brushes</a>
+<a href="shop.html" style="text-decoration: none; min-height: 44px; display: flex; align-items: center">Bags &amp; Storage</a>
+<a href="shop.html" style="text-decoration: none; min-height: 44px; display: flex; align-items: center">Mirrors &amp; Vanity</a>
+<a href="shop.html" style="text-decoration: none; min-height: 44px; display: flex; align-items: center">Skincare &amp; Removal</a>
+</nav>
+<div style="display: flex; gap: 4px">
+<button aria-label="Search" style="width: 44px; height: 44px; border: 0; background: transparent; color: #3A2530; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></button>
+<button aria-label="Account" style="width: 44px; height: 44px; border: 0; background: transparent; color: #3A2530; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"></path></svg></button>
+<button aria-label="Shopping bag" style="width: 44px; height: 44px; border: 0; background: transparent; color: #3A2530; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg></button>
+</div>
+</div>
+</header>
+
+<main style="max-width: 1240px; margin: 0 auto; padding: 32px 24px 80px; display: flex; flex-direction: column; gap: 28px">
+<nav aria-label="Breadcrumb" style="font-size: 14px; color: #5C3F4B"><a href="index.html">Home</a> / Shop all</nav>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h1 style="margin: 0; font-family: 'Bodoni Moda', serif; font-weight: 500; font-size: clamp(40px, 5vw, 64px); line-height: 1.05">Shop <em>all</em></h1>
+<p style="margin: 0; font-size: 18px; color: #5C3F4B; max-width: 36em">Everything you need to get ready, minus the makeup itself.</p>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between">
+<div id="filters" role="group" aria-label="Filter by category" style="display: flex; flex-wrap: wrap; gap: 10px">
+</div>
+<div style="font-size: 14px; color: #5C3F4B"><span id="count"></span></div>
+</div>
+
+<div id="grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 32px 24px">
+</div>
+</main>
+
+<footer style="background: #F9DDE0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 32px 24px; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; font-size: 14px; color: #5C3F4B">
+<div style="font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 22px; color: #3A2530">Everything but the Makeup</div>
+<div>Shipping · Returns · Contact us</div>
+<div>© 2026 everythingbutmakeup.com</div>
+</div>
+</footer>
+
+</div>
+<script>
+
+var cats=[['all','All'],['tools','Tools & Brushes'],['bags','Bags & Storage'],['mirrors','Mirrors & Vanity'],['skin','Skincare & Removal']];
+var all=[['The Everyday Brush Set','tools','€34.00'],['Cloud Quilted Makeup Bag','bags','€24.00'],['Halo LED Vanity Mirror','mirrors','€59.00'],['Soft Reusable Cleansing Pads','skin','€12.00'],['Blending Sponge Duo','tools','€9.00'],['Clear Stackable Organizer','bags','€29.00'],['Pocket Compact Mirror','mirrors','€14.00'],['Bow Spa Headband','skin','€8.00'],['Rose Gold Lash Curler','tools','€11.00'],['Velvet Brush Roll','bags','€18.00'],['Clip-on Vanity Light Strip','mirrors','€22.00'],['Gentle Cleansing Balm','skin','€16.00']];
+var cur='all',label={};cats.forEach(function(c){label[c[0]]=c[1]});
+function esc(s){return s.replace(/&/g,'&amp;')}
+function render(){
+var f=document.getElementById('filters');f.innerHTML='';
+cats.forEach(function(c){var on=c[0]===cur,b=document.createElement('button');b.textContent=c[1];b.setAttribute('aria-pressed',on);
+b.style.cssText='min-height:44px;padding:0 20px;border-radius:999px;font:inherit;font-size:15px;cursor:pointer;border:1px solid '+(on?'#B8436A':'#3A2530')+';background:'+(on?'#B8436A':'transparent')+';color:'+(on?'#FFFFFF':'#3A2530');
+b.onclick=function(){cur=c[0];render()};f.appendChild(b)});
+var list=all.filter(function(p){return cur==='all'||p[1]===cur});
+document.getElementById('count').textContent=list.length+(list.length===1?' product':' products');
+document.getElementById('grid').innerHTML=list.map(function(p,i){return '<div style="display:flex;flex-direction:column;gap:10px"><a href="product.html" style="text-decoration:none;display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:4/5;background:'+(i%2?'#F3E6D4':'#F9DDE0')+';border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:14px;color:#5C3F4B">Product photo</div><div style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#7A4A5C">'+esc(label[p[1]])+'</div><div style="font-size:18px;font-weight:500">'+p[0]+'</div></a><div style="color:#5C3F4B">'+p[2]+'</div><button style="min-height:46px;border-radius:999px;border:1px solid #3A2530;background:transparent;color:#3A2530;font:inherit;font-weight:500;cursor:pointer">Add to bag</button></div>'}).join('');
+}
+render();
+</script>
+</body>
+</html>
